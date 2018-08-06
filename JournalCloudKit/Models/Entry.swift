@@ -16,15 +16,15 @@ class Entry {
     let bodyText: String
     let ckRecordID: CKRecordID
     static let TypeKey = "Entry"
-    static let TitleKey = "title"
-    static let BodyTextKey = "bodyText"
-    static let CKRecordIDKey = "ckRecordID"
+    fileprivate static let TitleKey = "title"
+    fileprivate static let BodyTextKey = "bodyText"
+    fileprivate static let CKRecordIDKey = "ckRecordID"
     
     // MARK: - Initializers
-    init(title: String, bodyText: String, ckRecordID: CKRecordID) {
+    init(title: String, bodyText: String) {
         self.title = title
         self.bodyText = bodyText
-        self.ckRecordID = ckRecordID
+        self.ckRecordID = CKRecordID(recordName: self.title)
     }
     
     init?(cloudKitRecord: CKRecord) {

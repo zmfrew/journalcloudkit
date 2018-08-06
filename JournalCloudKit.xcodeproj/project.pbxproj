@@ -13,6 +13,7 @@
 		B623DA0221189BEB003AC688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B623DA0021189BEB003AC688 /* LaunchScreen.storyboard */; };
 		B623DA0C21189C04003AC688 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B623DA0B21189C04003AC688 /* CloudKit.framework */; };
 		B623DA1421189CA8003AC688 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623DA1321189CA8003AC688 /* Entry.swift */; };
+		B623DA442118B1C9003AC688 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623DA432118B1C9003AC688 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B623DA0921189C01003AC688 /* JournalCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalCloudKit.entitlements; sourceTree = "<group>"; };
 		B623DA0B21189C04003AC688 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B623DA1321189CA8003AC688 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		B623DA432118B1C9003AC688 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		B623DA0D21189C0A003AC688 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B623DA422118B1B6003AC688 /* ModelControllers */,
 				B623DA0E21189C0E003AC688 /* ViewControllers */,
 			);
 			path = Controllers;
@@ -124,6 +127,14 @@
 				B623DA0321189BEB003AC688 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B623DA422118B1B6003AC688 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B623DA432118B1C9003AC688 /* EntryController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B623DA442118B1C9003AC688 /* EntryController.swift in Sources */,
 				B623DA1421189CA8003AC688 /* Entry.swift in Sources */,
 				B623D9F821189BE9003AC688 /* AppDelegate.swift in Sources */,
 			);
