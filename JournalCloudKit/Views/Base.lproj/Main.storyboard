@@ -57,20 +57,73 @@
             </objects>
             <point key="canvasLocation" x="1064.8" y="178.56071964017991"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry Detail View Controller-->
         <scene sceneID="xSr-vm-qXW">
             <objects>
-                <viewController id="2i0-3Y-BrM" sceneMemberID="viewController">
+                <viewController id="2i0-3Y-BrM" customClass="EntryDetailViewController" customModule="JournalCloudKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l4P-CO-vdT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qFv-01-fdX">
+                                <rect key="frame" x="16" y="80" width="343" height="457"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-bi-FHG">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gbj-eK-VlE"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="2i0-3Y-BrM" id="4BQ-P8-Eje"/>
+                                        </connections>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="02N-kI-r67">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="411"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Im-db4">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UNN-I5-rQg" firstAttribute="trailing" secondItem="qFv-01-fdX" secondAttribute="trailing" constant="16" id="3UR-bU-vqw"/>
+                            <constraint firstItem="qFv-01-fdX" firstAttribute="top" secondItem="UNN-I5-rQg" secondAttribute="top" constant="16" id="62o-YC-bgz"/>
+                            <constraint firstItem="UNN-I5-rQg" firstAttribute="trailing" secondItem="VXO-Im-db4" secondAttribute="trailing" constant="16" id="Qa8-ZN-jK8"/>
+                            <constraint firstItem="qFv-01-fdX" firstAttribute="leading" secondItem="UNN-I5-rQg" secondAttribute="leading" constant="16" id="QzI-Jz-y0c"/>
+                            <constraint firstItem="VXO-Im-db4" firstAttribute="leading" secondItem="UNN-I5-rQg" secondAttribute="leading" constant="16" id="XBH-kv-CGH"/>
+                            <constraint firstItem="UNN-I5-rQg" firstAttribute="bottom" secondItem="VXO-Im-db4" secondAttribute="bottom" constant="20" id="qET-El-NPz"/>
+                            <constraint firstItem="qFv-01-fdX" firstAttribute="centerX" secondItem="l4P-CO-vdT" secondAttribute="centerX" id="reW-b0-ZP7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UNN-I5-rQg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="V94-9c-Fpf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IRd-IZ-5fy">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="2i0-3Y-BrM" id="vl7-fc-2BN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTV" destination="02N-kI-r67" id="D0W-cw-9n4"/>
+                        <outlet property="titleTF" destination="ooh-bi-FHG" id="2IV-GZ-pYM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHd-Ac-n3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="179"/>
+            <point key="canvasLocation" x="1789.5999999999999" y="178.56071964017991"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="atH-p4-hbZ">
