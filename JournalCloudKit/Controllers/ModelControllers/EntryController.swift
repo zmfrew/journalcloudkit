@@ -60,6 +60,9 @@ class EntryController {
     }
     
     func delete(entry: Entry) {
+        if let entryIndex = entries.index(of: entry) {
+            entries.remove(at: entryIndex)
+        }
         privateDB.delete(withRecordID: entry.ckRecordID) { (_, error) in
             if let error = error {
                 print("Error occurred deleting record: \(error.localizedDescription).")

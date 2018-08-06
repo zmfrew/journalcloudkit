@@ -38,6 +38,11 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        titleTF.text = ""
+        bodyTV.text = ""
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.resignFirstResponder()
         return true
