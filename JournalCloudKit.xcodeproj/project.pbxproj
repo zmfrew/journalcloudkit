@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60A34852118D6430047A156 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A34842118D6430047A156 /* EntryListTableViewController.swift */; };
+		B60A34892118D9270047A156 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A34882118D9270047A156 /* EntryDetailViewController.swift */; };
 		B623D9F821189BE9003AC688 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623D9F721189BE9003AC688 /* AppDelegate.swift */; };
 		B623D9FD21189BE9003AC688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B623D9FB21189BE9003AC688 /* Main.storyboard */; };
 		B623D9FF21189BEB003AC688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B623D9FE21189BEB003AC688 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60A34842118D6430047A156 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		B60A34882118D9270047A156 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		B623D9F421189BE9003AC688 /* JournalCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B623D9F721189BE9003AC688 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B623D9FC21189BE9003AC688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		B623DA0E21189C0E003AC688 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B60A34842118D6430047A156 /* EntryListTableViewController.swift */,
+				B60A34882118D9270047A156 /* EntryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 			files = (
 				B623DA442118B1C9003AC688 /* EntryController.swift in Sources */,
 				B623DA1421189CA8003AC688 /* Entry.swift in Sources */,
+				B60A34852118D6430047A156 /* EntryListTableViewController.swift in Sources */,
+				B60A34892118D9270047A156 /* EntryDetailViewController.swift in Sources */,
 				B623D9F821189BE9003AC688 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
