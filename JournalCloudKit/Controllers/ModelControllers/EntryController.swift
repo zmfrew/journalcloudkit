@@ -44,7 +44,8 @@ class EntryController {
     }
     
     func fetchEntries(completion: @escaping (Bool) -> ()) {
-        let query = CKQuery(recordType: Entry.TypeKey, predicate: NSPredicate(value: true))
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: Entry.TypeKey, predicate: predicate)
         privateDB.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error {
                 print("Error occurred fetching entry records: \(error.localizedDescription).")

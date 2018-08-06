@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qFv-01-fdX">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qFv-01-fdX">
                                 <rect key="frame" x="16" y="80" width="343" height="457"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-bi-FHG">
@@ -92,7 +92,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Im-db4">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hjg-gp-Nkb"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -101,6 +104,7 @@
                         <constraints>
                             <constraint firstItem="UNN-I5-rQg" firstAttribute="trailing" secondItem="qFv-01-fdX" secondAttribute="trailing" constant="16" id="3UR-bU-vqw"/>
                             <constraint firstItem="qFv-01-fdX" firstAttribute="top" secondItem="UNN-I5-rQg" secondAttribute="top" constant="16" id="62o-YC-bgz"/>
+                            <constraint firstItem="UNN-I5-rQg" firstAttribute="bottom" secondItem="qFv-01-fdX" secondAttribute="bottom" constant="130" id="P5y-N0-HGk"/>
                             <constraint firstItem="UNN-I5-rQg" firstAttribute="trailing" secondItem="VXO-Im-db4" secondAttribute="trailing" constant="16" id="Qa8-ZN-jK8"/>
                             <constraint firstItem="qFv-01-fdX" firstAttribute="leading" secondItem="UNN-I5-rQg" secondAttribute="leading" constant="16" id="QzI-Jz-y0c"/>
                             <constraint firstItem="VXO-Im-db4" firstAttribute="leading" secondItem="UNN-I5-rQg" secondAttribute="leading" constant="16" id="XBH-kv-CGH"/>
@@ -145,6 +149,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8EV-ba-7zo"/>
+        <segue reference="3TZ-DP-whi"/>
     </inferredMetricsTieBreakers>
 </document>

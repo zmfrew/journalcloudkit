@@ -29,12 +29,17 @@ class Entry {
     
     init?(cloudKitRecord: CKRecord) {
         guard let title = cloudKitRecord[Entry.TitleKey] as? String,
-            let bodyText = cloudKitRecord[Entry.BodyTextKey] as? String,
-            let ckRecordID = cloudKitRecord[Entry.CKRecordIDKey] as? CKRecordID else { return nil }
+            let bodyText = cloudKitRecord[Entry.BodyTextKey] as? String else { return nil }
         
+       
         self.title = title
         self.bodyText = bodyText
-        self.ckRecordID = ckRecordID
+        
+        if let ckRecordID = cloudKitRecord[Entry.CKRecordIDKey] as? CKRecordID  {
+            self.ckRecordID = ckRecordID
+        } else {
+            self.ckRecordID = CKRecordID(recordName: self.title)
+        }
     }
     
 }
@@ -55,7 +60,6 @@ extension CKRecord {
         self.init(recordType: Entry.TypeKey, recordID: entry.ckRecordID)
         self.setValue(entry.title, forKey: Entry.TitleKey)
         self.setValue(entry.bodyText, forKey: Entry.BodyTextKey)
-        self.setValue(entry.ckRecordID, forKey: Entry.CKRecordIDKey)
     }
     
 }

@@ -9,18 +9,28 @@
 import UIKit
 
 class EntryListTableViewController: UITableViewController {
-
-    // MARK: - Properties
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
-        return formatter
-    }()
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        EntryController.shared.fetchEntries { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        EntryController.shared.fetchEntries { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table View Data Source
